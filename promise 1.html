@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Promise</h2>
+<p id="basic"></p>
+
+<script>
+function myDisplayer(some) {
+  document.getElementById("basic").innerHTML = some;
+}
+let myPromise = new Promise(function(myResolve, myReject) {
+  let x = 5;
+  if (x == 5) {
+    myResolve("okay");
+  } else {
+    myReject("Error");
+  }
+});
+myPromise.then(
+  function(value) {myDisplayer(value);},
+  function(error) {myDisplayer(error);}
+);
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+<head>
+
+</head>
+<body>
+<h1> using callback </h1>
+<h2> shopping website</h2>
+<script>
+function showData(name, amt) {
+alert(' Hello ' + name + '\n Your entered amount is ' + amt);
+}
+
+function getData(callback) {
+var name = prompt(" Welcome to the shopping website \n What is your name?");
+var amt = prompt(" Enter some amount...");
+callback(name, amt);
+}
+
+getData(showData);
+</script>
+</body>
+
+</html>
